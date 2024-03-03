@@ -7,6 +7,8 @@ The notebook is a proof of concept on how to build a retrieval-augmented generat
 - Langchain is used as library to generate chunks from provided markdown files and embedd them using Ollama. The embeddings are stored in a chroma database.
 - Gradio is used to provide a simple chat interface to interact with the RAG-Chatbot.
 
+![RAG-ChatAPP Architecture](RAG-Architecture.png)
+
 ## Installation
 1. Recommended to use a virtual environment using python version 3.11.
 2. Install ollama following the installation instructions from the [Ollama Github Repository](https://github.com/ollama/ollama).
