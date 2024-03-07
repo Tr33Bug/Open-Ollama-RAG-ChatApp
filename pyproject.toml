@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "open-ollama-rag-chatapp"
+version = "0.1.0"
+description = ""
+authors = ["Henrik Wiegand <tr33bug@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+notebook = "^7.1.1"
+langchain = "^0.1.11"
+chromadb = "^0.4.24"
+langchain-community = "^0.0.27"
+gradio = "^4.20.1"
+jupyter = "^1.0.0"
+ipywidgets = "^8.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
