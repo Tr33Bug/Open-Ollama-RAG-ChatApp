@@ -10,18 +10,35 @@ The notebook is a proof of concept on how to build a retrieval-augmented generat
 ![RAG-ChatAPP Architecture](RAG-Architecture.png)
 
 ## Installation
-1. Recommended to use a virtual environment using python version 3.11.
-2. Install ollama following the installation instructions from the [Ollama Github Repository](https://github.com/ollama/ollama).
-3. Pull the desired model for ollama and start the ollama backend using the following command:
+### Prerequisites
+- Ollama to host the language models.
+    - Installation instructions can be found in the [Ollama Github Repository](https://github.com/ollama/ollama)
+- Minicoda or other conda distribution (Optional but recommended).
+    - Installation instructions can be found in the [Conda Documentation](https://docs.anaconda.com/free/miniconda/index.html)
+- Poetry to install the required python packages (Optional but recommended).
+    - Installation instructions can be found in the [Poetry Documentation](https://python-poetry.org/docs/)
+
+### Steps
+1. Pull the desired model for ollama and start the ollama backend using the following command:
 ```bash
 # change model to the desired model name -> see https://ollama.com/library for other models
 ollama pull llama2:chat
 ollama start
 ```
-4. Uncomment the first cell in the notebook and run it to install the required packages.
-5. On first run set the `initial_db = True`. This will create new embeddings for the provided markdown files and create a new chroma db in the given path (`DATA_PATH = "data/"`).
-6. Drop your own markdown files in the `data/` folder. 
-7. Run the notebook. 
+2. Create and activate a virtual environment using conda: 
+```bash
+# create env
+conda create -n open_rag_chat python=3.11
+# activate env
+conda activate open_rag_chat
+```
+3. Install the required packages using poetry:
+```bash
+poetry install
+```
+4. On first run set the `initial_db = True`. This will create new embeddings for the provided markdown files and create a new chroma db in the given path (`DATA_PATH = "data/"`).
+5. Drop your own markdown files in the `data/` folder. 
+6. Run the notebook. 
 
 ## References
 - Ollama: [Ollama Github Repository](https://github.com/ollama/ollama)
